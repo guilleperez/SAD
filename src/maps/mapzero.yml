@@ -1,0 +1,188 @@
+# Final Project: Adventure Game with Microservices
+# Date: 26-Nov-2018
+# Authors: A01377162 Guillermo Pérez Trueba
+#          A01020507 Luis Ángel Lucatero Villanueva
+#          A01375996 Alan Joseph Salazar Romero
+
+
+#0
+-   north:    0
+    south:    0
+    east:     0
+    west:     0
+    up:       0
+    down:     0
+    contents: 0
+
+#1
+-   north:    0
+    south:    2
+    east:     0
+    west:     0
+    up:       0
+    down:     0
+    contents: 0
+
+#2
+-   north:    1
+    south:    3
+    east:     3
+    west:     0
+    up:       0
+    down:     0
+    contents: 0
+
+
+#3
+-   north:    2
+    south:    0
+    east:     5
+    west:     2
+    up:       0
+    down:     0
+    contents: 0
+
+#4
+-   north:    0
+    south:    5
+    east:     0
+    west:     0
+    up:       0
+    down:     0
+    contents: 0
+
+#5
+-   north:    4
+    south:    0
+    east:     0
+    west:     3
+    up:       15
+    down:     13
+    contents: 0
+
+#6
+-   north:    0
+    south:    0
+    east:     1
+    west:     0
+    up:       0
+    down:     0
+    contents: 0
+
+#7 
+-   north:    0
+    south:    8
+    east:     0
+    west:     0
+    up:       0
+    down:     0
+    contents: 0
+
+#8
+-   north:    7
+    south:    10
+    east:     0
+    west:     0
+    up:       0
+    down:     0
+    contents: 0
+
+#9
+-   north:    0
+    south:    19
+    east:     0
+    west:     8
+    up:       0
+    down:     8
+    contents: 0
+
+#10
+-   north:    8
+    south:    0
+    east:     11
+    west:     0
+    up:       0
+    down:     0
+    contents: 0
+
+
+#11
+-   north:    0
+    south:    0
+    east:     10
+    west:     0
+    up:       0
+    down:     0
+    contents: 0
+
+#12
+-   north:    0
+    south:    0
+    east:     0
+    west:     13
+    up:       0
+    down:     0
+    contents: 0
+
+#13
+-   north:    0
+    south:    0
+    east:     12
+    west:     0
+    up:       5
+    down:     0
+    contents: 0
+
+#14
+-   north:    0
+    south:    15
+    east:     17
+    west:     0
+    up:       0
+    down:     0
+    contents: 0
+
+#15 
+-   north:    14
+    south:    0
+    east:     0
+    west:     0
+    up:       0
+    down:     5
+    contents: 0
+
+#16
+-   north:    17
+    south:    0
+    east:     19
+    west:     0
+    up:       0
+    down:     0
+    contents: 0
+
+#17
+-   north:    18
+    south:    16
+    east:     0
+    west:     14
+    up:       0
+    down:     0
+    contents: 0
+
+#18
+-   north:    0
+    south:    17
+    east:     0
+    west:     0
+    up:       0
+    down:     0
+    contents: 0
+
+#19 
+-   north:    9
+    south:    0
+    east:     16
+    west:     0
+    up:       0
+    down:     0
+    contents: 0

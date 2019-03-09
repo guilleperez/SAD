@@ -1,0 +1,11 @@
+{
+    "maps": {
+        "lambda": {
+            "httpMethod": "POST",
+            "body": "{\"id\": 5, \"pos\": 0, \"new_one\": 5, \"type\": \"RESET\"}"
+        }
+    },
+    "": {
+        "lambda": {}
+    }
+}

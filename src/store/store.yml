@@ -1,0 +1,39 @@
+# Final Project: Adventure Game with Microservices
+# Date: 26-Nov-2018
+# Authors: A01377162 Guillermo Pérez Trueba
+#          A01020507 Luis Ángel Lucatero Villanueva
+#          A01375996 Alan Joseph Salazar Romero
+
+-   option: "0 - TO CONTINUE ADVENTURE"
+    item: ""
+    cost: 0
+    
+-   option: "1 - FLAMING TORCH ($15)"
+    key: "light"
+    item: "FLAMING TORCH"
+    cost: 15
+    
+-   option: "2 - AXE ($10)"
+    key: "axe"
+    item: "AXE"
+    cost: 10
+
+-   option: "3 - SWORD ($20)"
+    key: "sword"
+    item: "SWORD"
+    cost: 20
+    
+-   option: "4 - FOOD ($2 PER UNIT)"
+    key: "food"
+    item: "UNITS OF FOOD"
+    cost: 2
+    
+-   option: "5 - MAGIC AMULET ($30)"
+    key: "amulet"
+    item: "MAGIC AMULET"
+    cost: 30
+
+-   option: "6 - SUIT OF ARMOR ($50)"
+    key: "suit"
+    item: "SUIT OF ARMOR"
+    cost: 50

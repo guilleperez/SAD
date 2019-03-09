@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+<head>
+<title>Object</title>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<link href='../css/style.css' media='screen' rel='stylesheet' type='text/css'>
+<script type='text/javascript'>
+  function popupCode(url) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+  
+  function toggleCode(id) {
+    var code = document.getElementById(id)
+  
+    code.style.display = code.style.display != 'block' ? 'block' : 'none'
+    return true
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+</script>
+</head>
+<body class='page'>
+<div class='class' id='wrapper'>
+<div class='header'>
+<h1 class='name'><span class='type'>class</span>
+Object
+</h1>
+<ol class='paths'>
+<li>
+<a href="../files/src/client_rb.html">src/client.rb</a>
+</li>
+</ol>
+<div class='parent'>
+Superclass:
+<strong>BasicObject</strong>
+</div>
+</div>
+<div id='content'>
+<div id='text'>
+<div id='description'></div>
+<div id='context'>
+</div>
+<div id='section'>
+<div id='constants-list'>
+<h2>Constants</h2>
+<div class='name-list'>
+<table summary='Constants'>
+<tr class='top-aligned-row context-row'>
+<td class='context-item-name'>BOUGHT_MESSAGE</td>
+<td>=</td>
+<td class='context-item-value'>"YOU HAVE BOUGHT "</td>
+<td>&nbsp;</td>
+<td class='context-item-desc'>
+<p>Success to buy message</p>
+</td>
+</tr>
+<tr class='top-aligned-row context-row'>
+<td class='context-item-name'>FAIL_MESSAGE</td>
+<td>=</td>
+<td class='context-item-value'>"YOU HAVEN'T GOT ENOUGH MONEY"</td>
+<td>&nbsp;</td>
+<td class='context-item-desc'>
+<pre class="ruby"><span class="ruby-constant">Constant</span> <span class="ruby-constant">Messages</span>
+</pre>
+
+<p>Failed to buy something message</p>
+</td>
+</tr>
+<tr class='top-aligned-row context-row'>
+<td class='context-item-name'>NOT_ENOUGH_FOOD</td>
+<td>=</td>
+<td class='context-item-value'>"YOU DON'T HAVE ENOUGH UNITS OF FOOD"</td>
+<td>&nbsp;</td>
+<td class='context-item-desc'>
+<p>Failed to eat message</p>
+</td>
+</tr>
+<tr class='top-aligned-row context-row'>
+<td class='context-item-name'>POSITION</td>
+<td>=</td>
+<td class='context-item-value'>6</td>
+<td>&nbsp;</td>
+<td class='context-item-desc'>
+<p>Position to set in the map</p>
+</td>
+</tr>
+<tr class='top-aligned-row context-row'>
+<td class='context-item-name'>URL_MICROSERVICE_ITEMS</td>
+<td>=</td>
+<td class='context-item-value'>'http://localhost:8081/store'</td>
+<td>&nbsp;</td>
+<td class='context-item-desc'>
+<h6 id="label-"><span><a href="#label-">&para;</a> <a href="#top">&uarr;</a></span></h6>
+
+<pre>URL to the microservice running in the same computer as
+the client.</pre>
+
+<p>Store Microservice URL</p>
+</td>
+</tr>
+<tr class='top-aligned-row context-row'>
+<td class='context-item-name'>URL_MICROSERVICE_MAP</td>
+<td>=</td>
+<td class='context-item-value'>'https://kfjasudkr3.execute-api.us-west-2.amazonaws.com/default/maps'</td>
+<td>&nbsp;</td>
+<td class='context-item-desc'>
+<p>Map Microservice URL</p>
+</td>
+</tr>
+<tr class='top-aligned-row context-row'>
+<td class='context-item-name'>URL_MICROSERVICE_ROOMS</td>
+<td>=</td>
+<td class='context-item-value'>'http://localhost:8082/rooms'</td>
+<td>&nbsp;</td>
+<td class='context-item-desc'>
+<p>Rooms Microservice URL</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div id='footer-push'></div>
+</div>
+<div id='footer'>
+<a href="https://github.com/rdoc/hanna-nouveau"><strong>Hanna Nouveau</strong> RDoc template</a>
+</div>
+</body>
+</html>

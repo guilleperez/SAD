@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+<head>
+<title>RESTful</title>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<link href='../css/style.css' media='screen' rel='stylesheet' type='text/css'>
+<script type='text/javascript'>
+  function popupCode(url) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+  
+  function toggleCode(id) {
+    var code = document.getElementById(id)
+  
+    code.style.display = code.style.display != 'block' ? 'block' : 'none'
+    return true
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+</script>
+</head>
+<body class='page'>
+<div class='class' id='wrapper'>
+<div class='header'>
+<h1 class='name'><span class='type'>module</span>
+RESTful
+</h1>
+<ol class='paths'>
+<li>
+<a href="../files/src/client_rb.html">src/client.rb</a>
+</li>
+</ol>
+</div>
+<div id='content'>
+<div id='text'>
+<div id='description'>
+<p>Module to manage the HTTP requests</p>
+</div>
+<div id='method-list'>
+<h2>Methods</h2>
+<h3>Public Class</h3>
+<ol>
+<li><a href="#method-c-delete">delete</a></li>
+<li><a href="#method-c-get">get</a></li>
+<li><a href="#method-c-post">post</a></li>
+<li><a href="#method-c-put">put</a></li>
+</ol>
+</div>
+<div id='context'>
+</div>
+<div id='section'>
+<div id='methods'>
+<h2>Public Class methods</h2>
+<div class='method public-class' id='method-method-c-delete'>
+<a name='method-c-delete'></a>
+<div class='synopsis'>
+<span class='name'>delete</span>
+<span class='arguments'>(url)</span>
+
+</div>
+<div class='description'>
+
+<p>DELETE Method</p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-c-delete-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-c-delete-source'><span class="ruby-comment"># File src/client.rb, line 66</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">delete</span>(<span class="ruby-identifier">url</span>)&#x000A;  <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)&#x000A;  <span class="ruby-identifier">use_ssl</span> = (<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">scheme</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;https&#39;</span>)&#x000A;  <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">start</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>, <span class="ruby-value">use_ssl:</span> <span class="ruby-identifier">use_ssl</span>)&#x000A;  <span class="ruby-identifier">http</span>.<span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;DELETE&#39;</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">request_uri</span>)&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+<div class='method public-class' id='method-method-c-get'>
+<a name='method-c-get'></a>
+<div class='synopsis'>
+<span class='name'>get</span>
+<span class='arguments'>(url)</span>
+
+</div>
+<div class='description'>
+
+<p>GET Method</p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-c-get-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-c-get-source'><span class="ruby-comment"># File src/client.rb, line 41</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">get</span>(<span class="ruby-identifier">url</span>)&#x000A;  <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)&#x000A;  <span class="ruby-identifier">use_ssl</span> = (<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">scheme</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;https&#39;</span>)&#x000A;  <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">start</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>, <span class="ruby-value">use_ssl:</span> <span class="ruby-identifier">use_ssl</span>)&#x000A;  <span class="ruby-identifier">resp</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;GET&#39;</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">request_uri</span>)&#x000A;  <span class="ruby-identifier">resp</span>.<span class="ruby-identifier">body</span>&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+<div class='method public-class' id='method-method-c-post'>
+<a name='method-c-post'></a>
+<div class='synopsis'>
+<span class='name'>post</span>
+<span class='arguments'>(url, data, content_type)</span>
+
+</div>
+<div class='description'>
+
+<p>POST Method</p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-c-post-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-c-post-source'><span class="ruby-comment"># File src/client.rb, line 50</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">post</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">content_type</span>)&#x000A;  <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)&#x000A;  <span class="ruby-identifier">use_ssl</span> = (<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">scheme</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;https&#39;</span>)&#x000A;  <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">start</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>, <span class="ruby-value">use_ssl:</span> <span class="ruby-identifier">use_ssl</span>)&#x000A;  <span class="ruby-identifier">http</span>.<span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;POST&#39;</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">request_uri</span>, <span class="ruby-identifier">data</span>, <span class="ruby-string">&#39;Content-Type&#39;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">content_type</span>)&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+<div class='method public-class' id='method-method-c-put'>
+<a name='method-c-put'></a>
+<div class='synopsis'>
+<span class='name'>put</span>
+<span class='arguments'>(url, data, content_type)</span>
+
+</div>
+<div class='description'>
+
+<p>PUT Method</p>
+
+</div>
+<div class='source'>
+<a class='source-toggle' href='#' onclick='toggleCode(&#39;method-c-put-source&#39;); return false'>
+[show source]
+</a>
+<pre id='method-c-put-source'><span class="ruby-comment"># File src/client.rb, line 58</span>&#x000A;<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">put</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">content_type</span>)&#x000A;  <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)&#x000A;  <span class="ruby-identifier">use_ssl</span> = (<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">scheme</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;https&#39;</span>)&#x000A;  <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">start</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>, <span class="ruby-value">use_ssl:</span> <span class="ruby-identifier">use_ssl</span>)&#x000A;  <span class="ruby-identifier">http</span>.<span class="ruby-identifier">send_request</span>(<span class="ruby-string">&#39;PUT&#39;</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">request_uri</span>, <span class="ruby-identifier">data</span>, <span class="ruby-string">&#39;Content-Type&#39;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">content_type</span>)&#x000A;<span class="ruby-keyword">end</span></pre>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div id='footer-push'></div>
+</div>
+<div id='footer'>
+<a href="https://github.com/rdoc/hanna-nouveau"><strong>Hanna Nouveau</strong> RDoc template</a>
+</div>
+</body>
+</html>
